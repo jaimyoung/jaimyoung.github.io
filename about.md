@@ -4,15 +4,9 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+실리콘밸리 데이터과학자 권재명 (Jaimie Kwon) 의 홈페이지입니다.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+- ["따라 하며 배우는 데이터 과학 (2017)" 홈페이지](/ipds-kr/) 
+- ["따라 하며 배우는 데이터 과학 (2017)" 페이스북 (Facebook)](https://www.facebook.com/dataninja.me)
+- [링크드인 (LinkedIn)](https://www.linkedin.com/in/statkwon/)
+- [개인 페이스북 (Facebook)](https://www.facebook.com/jaimie.kwon)
