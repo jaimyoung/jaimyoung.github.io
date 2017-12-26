@@ -57,3 +57,5 @@ plugins:
 disqus_short_name: jaimyounggithubio
 disqus_show_comment_count: false
 
+# Google Analytics
+google_analytics: UA-5745444-4
