@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 보충 내용
+redirect_from: "/ipds-kr-addendum/"
 date: 2017-08-28 01:22:26.000000000 -07:00
 ---
 <p>&lt;&lt;따라 하며 배우는 데이터 과학&gt;&gt; 보충 내용 (Addendum) 목록입니다.</p>

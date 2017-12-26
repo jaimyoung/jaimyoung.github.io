@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 따라 하는 데이터 과학 - 강의 PPT
+redirect_from: "/ipds-kr-slides-ppt/"
 ---
 <p>따라 하는 데이터 과학 - 강의 PPT입니다. 강좌나 수업에 활용하시면 저자에게 알려주시면 감사하겠습니다. 질문/건의 사항등은 이메일(dataninjame@gmail.com), 각 장의 구글 슬라이드 코멘트, <a href="https://www.facebook.com/dataninja.me/">페이스북 페이지</a> 등으로 해 주세요. 감사합니다.</p>
 <ul>

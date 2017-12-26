@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 정오표 (Errata)
+redirect_from: "/ipds-kr-errata/"
 date: 2017-08-05 20:03:29.000000000 -07:00
 ---
 <p>* 계속 업데이트할 예정입니다. 오류를 발견하면 저자 (dataninjame@gmail.com)에게 알려주시거나, 이 페이지에 코멘트 해 주세요. 오탈자의 최종 리스트는 출판사에서 <a href="http://jpub.tistory.com/726">다음 페이지로</a> 정리하여 다음 쇄에 반영할 예정입니다.</p>

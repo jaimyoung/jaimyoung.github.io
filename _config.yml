@@ -47,3 +47,6 @@ collections:
   ipds-kr:
     output: true
     permalink: /ipds-kr/:path/
+
+plugins:
+  - jekyll-redirect-from
