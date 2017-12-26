@@ -42,3 +42,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  ipds-kr:
+    output: true
+    permalink: /ipds-kr/:path/
