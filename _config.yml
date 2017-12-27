@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   R, 파이썬(Python), 데이터 과학 (data science) 이야기.
   실리콘밸리 데이터과학자 권재명 (Jaimie Kwon) 의 홈페이지입니다.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jaimyoung.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # hide .html extensions cf. https://jekyllrb.com/docs/permalinks/
 permalink: /:year/:month/:day/:title/
