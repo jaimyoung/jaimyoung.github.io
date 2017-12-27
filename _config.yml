@@ -57,9 +57,9 @@ plugins:
   - jekyll-redirect-from
 
 
-# Disqus Comments
-disqus_short_name: jaimyounggithubio
-disqus_show_comment_count: false
+# Disqus Comments per https://github.com/jekyll/minima
+disqus:
+  shortname: jaimyounggithubio
 
 # Google Analytics
 google_analytics: UA-5745444-4
