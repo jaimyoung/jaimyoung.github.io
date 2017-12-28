@@ -60,7 +60,8 @@ plugins:
 
 # Disqus Comments per https://github.com/jekyll/minima
 disqus:
-  shortname: jaimyounggithubio
+#  shortname: jaimyounggithubio
+  shortname: dataninja-me
 
 # Google Analytics
 google_analytics: UA-5745444-4
