@@ -210,3 +210,7 @@ Voilà, now the comments works on Netlify.
 I described how I migrated my homepage from
 WordPress.com to GitHub Pages for speed and flexibilty,
 then to Netlify for HTTPS support.
+
+## References
+- [Getting started with Jekyll - Series](https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/) by
+    CloudCannon
