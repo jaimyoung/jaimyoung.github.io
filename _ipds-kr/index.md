@@ -6,6 +6,12 @@ date: 2017-08-01 16:05:14.000000000 -07:00
 ---
 > "1. 굉장히 입체적으로 쓰여진 책이다.", "2. 사전식으로 기능을 나열하는 게 아니라, 실제 데이터분석 프로젝트를 진행하는 순서 그대로를 설명하고 실습한다.", "3. 꼼꼼한 검수 과정을 거친 것으로 보이며, 관련 자료를 풍부하게 제공하고 있다.", "4. 독자를 배려하는(;;;) 책이다." ... ([레오군 님 리뷰](http://leoslife.com/archives/4156) 중에서)
 
+
+- **<i class="fa fa-newspaper-o"></i> 2018년 1월부터 파이썬 버전 연재 시작합니다.**
+    - 1편. [환경 설정](/ipds-kr/python-setup/)
+    - 2편. [자료 처리](/ipds-kr/python-data-processing/)
+    - 3편. 시각화 (TBA)
+    - 4편. 통계 모형 (TBA)
 - <i class="fa fa-credit-card"></i> **온라인 주문:**
     **[[교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791185890869&amp;orderClick=LAH&amp;Kc=)]
     [[반디앤루니스](http://www.bandinlunis.com/front/product/detailProduct.do?prodId=4091469)]
