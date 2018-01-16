@@ -57,7 +57,7 @@ comments: true
 
 ### 파이썬 셸
 파이썬 설치 후 터미널에서 다음처럼 파이썬 셸(python shell)을 시작해보자.
-(파이썬 셸에서 Ctrl+D 를 누르면 터미널로 빠져나온다.)
+(파이썬 셸에서 <kbd>Ctrl</kbd>+D 를 누르면 터미널로 빠져나온다.)
 
 ```
 $ python
@@ -138,20 +138,20 @@ gapminder.shape
 ```
 
 붙여넣은 후, 
-Shift+Enter 를 누르면
+<kbd>Shift</kbd>+<kbd>Enter</kbd> 를 누르면
 `gapminder` 자료가 다운로드되어서 읽혀지고,
 자료의 차원이 표시된다:
 `(3313, 6)` 즉, 3313 행 (관측치), 6 열 (변수)이다.
 그리고, 현재 셀 아래에 새로운 셀이 추가되어 다음 입력을 기다리게 된다.
 
-다음 셀에 다음 명령을 붙여 넣고 앞서와 마찬가지로 Shift+Enter를 누르면 
+다음 셀에 다음 명령을 붙여 넣고 앞서와 마찬가지로 <kbd>Shift</kbd>+<kbd>Enter</kbd>를 누르면 
 `gapminder` 자료의 첫 5줄을 표시해준다:
 ```python
 gapminder.head()
 ```
 
-그 다음 셀에는 다음 명령을 붙여 넣고 Ctrl+Enter를 눌러보자.
-(실행은 되지만, Shift+Enter 와는 달리 다음 셀이 추가되지 않는다.)
+그 다음 셀에는 다음 명령을 붙여 넣고 <kbd>Ctrl</kbd>+<kbd>Enter</kbd>를 눌러보자.
+(실행은 되지만, <kbd>Shift</kbd>+<kbd>Enter</kbd> 와는 달리 다음 셀이 추가되지 않는다.)
 
 ```python
 gapminder.lifeExp.plot.hist()
@@ -171,12 +171,12 @@ gapminder.lifeExp.plot.hist()
 이름을 변경하면 현재 작업 디렉토리에
 `session-01.ipynb` 파일이 생성되었음을 알 수 있다:
 ```sh
-✗ ls -l
+$ ls -l
 session-01.ipynb
 ```
 
 주피터를 종료하기 위해서는 앞서 `jupyter notebook`으로
-주피터를 시작한 셀 세션으로 돌아가서 Ctrl+C 를 두 번 눌러주면 된다:
+주피터를 시작한 셀 세션으로 돌아가서 <kbd>Ctrl</kbd>+<kbd>C</kbd> 를 두 번 눌러주면 된다:
 ```sh
 $ jupyter notebook
 ...
@@ -205,28 +205,28 @@ Kernel -> Restart & Run All
 
 ### 명령모드와 편집모드, 중요 키보드 단축키, 팁
 
-주피터 노트북은 아무 때나 Esc 키를 누르면 명령모드(command mode)로 들어가고 
-Enter 키나 셀을 클릭하면 편집모드(Edit mode)로 들어가게 된다.
+주피터 노트북은 아무 때나 <kbd>Esc</kbd> 키를 누르면 명령모드(command mode)로 들어가고 
+<kbd>Enter</kbd> 키나 셀을 클릭하면 편집모드(Edit mode)로 들어가게 된다.
 
 필자의 경험상 핵심적인 키보드 단축키는 다음과 같다:
 
 - 공통 
-    + Shift + Enter : run cell, select below
-    + Ctrl + Enter : run selected cells
-    + Esc : Enter command mode
-    + Enter : Enter edit mode    
-    + Cmd + Shift + P : Show command palette
+    + <kbd>Shift</kbd> + <kbd>Enter</kbd> : run cell, select below
+    + <kbd>Ctrl</kbd> + <kbd>Enter</kbd> : run selected cells
+    + <kbd>Esc</kbd> : Enter command mode
+    + <kbd>Enter</kbd> : Enter edit mode    
+    + <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> : Show command palette
 - 명령모드 (grey cell border with a blue left margin)
-    + Y / M : Change cell type to code / markdown
-    + Shift + Up/Down Arrows : Extend cell selections
-    + Shift + M : Merge selected cells, or merge the current cell with the one below
-    + D,D : delete selected cells
-    + C / X / V : copy / cut / paste below
-    + A / B : add cell above / below
+    + <kbd>Y</kbd> / <kbd>M</kbd> : Change cell type to code / markdown
+    + <kbd>Shift</kbd> + <kbd>&uparrow;</kbd>/<kbd>&downarrow;</kbd>  : Extend cell selections
+    + <kbd>Shift</kbd> + <kbd>M</kbd> : Merge selected cells, or merge the current cell with the one below
+    + <kbd>D</kbd>,<kbd>D</kbd> : delete selected cells
+    + <kbd>C</kbd> / <kbd>X</kbd> / <kbd>V</kbd> : copy / cut / paste below
+    + <kbd>A</kbd> / <kbd>B</kbd> : add cell above / below
 - 편집모드 (green cell border)
-    + Tab : Code completion
-    + Shift + Tab : Python tooltip
-    + Shift + Tab (twice) : Detailed Python tooltip
+    + <kbd>Tab</kbd> : Code completion
+    + <kbd>Shift</kbd> + <kbd>Tab</kbd> : Python tooltip
+    + <kbd>Shift</kbd> + <kbd>Tab</kbd> (twice) : Detailed Python tooltip
 
 
 ## 파이썬 패키지 관리와 설치
