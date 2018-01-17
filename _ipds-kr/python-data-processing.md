@@ -10,6 +10,9 @@ comments: true
 "데이터 취득과 데이터 가공: SQL과 dplyr" 내용을 파이썬으로
 익혀보도록 하자.
 
+주피터 노트북 버전은 다음 페이지에 있다:
+<http://nbviewer.jupyter.org/github/jaimyoung/ipds-kr/blob/master/notebooks/python-data-processing.ipynb>
+
 
 ```python
 %matplotlib inline
@@ -1065,6 +1068,375 @@ gapminder.\
     <tr>
       <th>Oceania</th>
       <td>71.4540</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+## 조인 연산자;  inner, left, right, full(outer) join
+R dplyr 예는 다음과 같다.
+```
+(df1 <- data_frame(x = c(1, 2), y = 2:1))
+(df2 <- data_frame(x = c(1, 3), a = 10, b = "a"))
+df1 %>% inner_join(df2)
+df1 %>% left_join(df2)
+df1 %>% right_join(df2)
+df1 %>% full_join(df2)
+```
+파이썬 판다스에서는 `DataFrame.merge` 함수로 처리하면 된다.
+
+
+```python
+df1 = pd.DataFrame(data={'x':range(2), 'y':range(2, 0, -1)})
+df1
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df2 = pd.DataFrame(data={'x':[1,3], 'a':10, 'b':"a"})
+df2
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>x</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>a</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+      <td>a</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df1.merge(df2, how="inner")
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>a</th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>10</td>
+      <td>a</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df1.merge(df2, how="left")
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>a</th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>a</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df1.merge(df2, how="inner")
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>a</th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>10</td>
+      <td>a</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df1.merge(df2, how="right")
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>a</th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1.0</td>
+      <td>10</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>NaN</td>
+      <td>10</td>
+      <td>a</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df1.merge(df2, how="outer")
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>a</th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1.0</td>
+      <td>10.0</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>a</td>
     </tr>
   </tbody>
 </table>
