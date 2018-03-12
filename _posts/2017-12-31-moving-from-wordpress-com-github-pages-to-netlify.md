@@ -211,6 +211,23 @@ I described how I migrated my homepage from
 WordPress.com to GitHub Pages for speed and flexibilty,
 then to Netlify for HTTPS support.
 
+
+## Update in 3/11/18
+After notebook migration,
+my xcode build pipeline broke,
+which prevents me from installing jekyll =(
+After 2 hrs of trying to re-install xcode,
+I concluded it's not worth it and got lazy(!)
+and decided to use Docker (of course).
+Per <https://github.com/BretFisher/jekyll-serve>,
+This is all I need:
+
+    docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
+
+**Lesson: spend at most 1 hr on your own IT; 
+Look for Docker solution after that.**
+
+
 ## References
 - [Getting started with Jekyll - Series](https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/) by
     CloudCannon
