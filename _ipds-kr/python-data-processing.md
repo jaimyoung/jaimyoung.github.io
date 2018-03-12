@@ -14,5 +14,5 @@ comments: true
   가시면 됩니다.
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="800" height="1024"
-src="http://nbviewer.jupyter.org/github/jaimyoung/ipds-kr/blob/master/notebooks/python-data-processing.ipynb">
+src="https://nbviewer.jupyter.org/github/jaimyoung/ipds-kr/blob/master/notebooks/python-data-processing.ipynb">
 </iframe>
