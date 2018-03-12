@@ -16,3 +16,8 @@ comments: true
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="800" height="1024"
 src="https://nbviewer.jupyter.org/github/jaimyoung/ipds-kr/blob/master/notebooks/python-data-processing.ipynb">
 </iframe>
+
+## 다른 장들
+- 1편. [환경 설정](/ipds-kr/python-setup/)
+- 2편. [자료 처리](/ipds-kr/python-data-processing/)
+- 3편. [시각화](/ipds-kr/python-data-visualization/)

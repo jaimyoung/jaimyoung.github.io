@@ -282,3 +282,8 @@ TBA
     - TBA
 2. 주피터 노트북에서 다음 처리를 해 보자.
     - TBA
+
+## 다른 장들
+- 1편. [환경 설정](/ipds-kr/python-setup/)
+- 2편. [자료 처리](/ipds-kr/python-data-processing/)
+- 3편. [시각화](/ipds-kr/python-data-visualization/)
