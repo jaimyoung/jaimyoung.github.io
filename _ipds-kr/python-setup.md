@@ -273,15 +273,60 @@ $ pip install geopandas folium
 깔끔하게 사용자 디렉토리
 (`Users/$username/anaconda2/`)만을 사용하는 것을 지향하기 때문이다.
 
+### 팁: 패키지 버전 판다스/넘파이
+2018년 1월 현재
+<https://pandas.pydata.org/pandas-docs/stable/> 에 따르면
+판다스의 안정적인 (stable) 최신 버전은 0.22.0 이다.
+API 가 계속 바뀌고 있으므로, 전에 작동하던 코드가
+동작하지 않던가 할 수 있다.
+
+
 
 ## 참고 문헌
-TBA
+
+- <http://pandas.pydata.org/pandas-docs/stable/index.html>
+
 
 ## 연습 문제
-1. 아나콘다 파이썬을 설치한 후 다음 라이브러리를 설치하여 보라.
-    - TBA
-2. 주피터 노트북에서 다음 처리를 해 보자.
-    - TBA
+
+1. 아나콘다 파이썬을 설치한 후, 주피터 노트북에서 다음 처리를 해 보자.
+    1. 판다스 패키지를 `pd`란 이름으로 로드한다.
+    1. `pd.read_` 로 시작하는 함수는 몇가지나 되는가?
+    1. `pd.read_csv()` 함수의 인자는 무엇이 있는가? (힌트: <kbd>Shift</kbd> + <kbd>Tab</kbd>)
+    1. `pd.read_csv()` 함수로 탭 구분된 자료를 읽어들이는 방법은?
+1. 다음 라이브러리를 설치하여 보라.
+    1. 그래프 알고리즘을 위한 <https://networkx.github.io/documentation/stable/>
+    1. 위 라이브러리를 `nx`란 이름으로 로드하라
+    1. 매뉴얼의 shortest path algorithm 예제를 실행해 보라
+
+
+## 연습문제 해답:
+
+
+1. 판다스 문제:
+    1. `import pandas as pd`
+    1. 18가지
+    1. 수십가지 인자가 있다!
+        온라인 매뉴얼을 봐도 되지만 
+        (<https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html>)
+        주피터 안에서 간편하게 볼 수 있다는 것이 장점.
+    1. `sep='\t'` 인자를 사용하면 된다.
+1. networkx
+    1. <https://networkx.github.io/documentation/stable/install.html> 에 써 있는 대로,
+
+            pip install networkx
+
+        을 실행하면 된다.
+        물론 <https://anaconda.org/anaconda/networkx>에 나온데로,
+        콘다(conda)를 이용해 설치해도 된다.
+    1. notebook에서 다음 명령이 실행되면 성공:
+        ```python
+        import networkx as nx
+        ```
+    1. 다양한 알고리즘이 있지만
+        <https://networkx.github.io/documentation/networkx-1.10/reference/generated/networkx.algorithms.shortest_paths.generic.shortest_path.html#networkx.algorithms.shortest_paths.generic.shortest_path>
+        정도를 실행하면 성공.
+
 
 ## 다른 장들
 - 1편. [환경 설정](/ipds-kr/python-setup/)
