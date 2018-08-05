@@ -9,6 +9,40 @@ date: 2017-08-05 20:03:29.000000000 -07:00
 
 계속 업데이트할 예정입니다. 오류를 발견하면 저자 (dataninjame@gmail.com)에게 알려주시거나, 이 페이지에 코멘트 해 주세요. 오탈자의 최종 리스트는 출판사에서 <a href="http://jpub.tistory.com/726">다음 페이지로</a> 정리하여 다음 쇄에 반영할 예정입니다.
 
+### (6/13/2018 김민규 독자님으로부터)
+
+- p.183 "8.3.3 아래에 13개의 설명변수가 아닌 14개의 설명변수가 아닌지 여쭙고 싶습니다.
+    adult 데이터는 wage 포함 총 15개의 변수를 포함하는 것 같은데, wage를 제외하고 또 다른 변수도 설명변수에서 제외한 것인지 잘 모르겠습니다."
+    - 맞습니다. 설명변수 개수는 \\(p=14\\) 입니다. p.180의 "13개의 설명변수"도 마찬가지로 잘못입니다.
+- p.185 "8.4 training, validation, test 데이터 세트로 구분하는 중에 오류가 있지 않은가 여쭙고 싶습니다.
+    총 adult 데이터의 32561 개 관측치를
+    `set.seed(1601)` 후 0.6 0.2 0.2 샘플링을 통해 각각
+    19536 6512 6513 개의 세트로 나눕니다.
+    그러나 그 후로 p.189 부터 9과glmnet 까지의 예시에는
+    training 데이터세트에 training 과 validation 데이터가 함께 있는 것 같습니다.
+    p.189~191의 summary(ad_glm_full) 맨 마지막의 Null deviance와 Residual deviance의 수가 training 세트보다 6512개 많습니다.
+    그 때문에 제 R 에 출력된 결과물과 책의 결과물에 차이가 있는 것 같습니다.
+    << validation + training 데이터로 실험 해봤으나 또 다른 것 같습니다. >>
+    - 이것도 맞습니다. 지금 github 에있는 코드
+    <https://github.com/jaimyoung/ipds-kr/blob/master/ch08-classification/adult/adult.R>
+    를 실행해 보니 다음과 같은 결과가 나옵니다:
+    ```r
+    ---
+    Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+    (Dispersion parameter for binomial family taken to be 1)
+
+        Null deviance: 21431  on 19535  degrees of freedom
+    Residual deviance: 12304  on 19437  degrees of freedom
+    AIC: 12502
+
+    Number of Fisher Scoring iterations: 15
+    ```
+- "그 후 9과에도 이해는 못하겠으나 ad_glmnet_fit 값들도 다르게 나옵니다."
+    - 마찬가지 오류인 것 같습니다. 코드 실행 결과와 책 사이에 차이가 있으면 일단 코드 실행 결과를 믿는 것이 좋을 것 같습니다.
+
+
+
 ### (2/3/2018 장지민 독자님으로부터)
 
 - p.150 다음 수식  
@@ -94,7 +128,6 @@ date: 2017-08-05 20:03:29.000000000 -07:00
     \\( \chi^2(n-1) \\)를 따른다. 여기서 \\(n=10\\)은 표본크기, 
     \\(\sigma^2 = 1.789^2\\) 은 참분산 값이다. 
     <https://en.wikipedia.org/wiki/Variance#Distribution_of_the_sample_variance>를 참조하라."
-
 - 116쪽 본문 첫 문장: "예를 들어, 위의 수면제 사람들에게 P-값의 의미를 질문하면 ..." ->  "위의 수면제 데이터 분석 결과에 대해 사람들에게 P-값의 의미를 질문하면....."
 
 - 126쪽 본문 첫째 줄: "95% 신뢰구간의 크기는 1/sqrt(n)이다." ->  "95% 신뢰구간의 크기는 \\(1/\sqrt(n)\\)에 비례한다"
