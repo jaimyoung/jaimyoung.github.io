@@ -7,6 +7,9 @@ categories: jekyll update
 WordPress.com to GitHub Pages for speed and flexibilty,
 then to Netlify for HTTPS support.**
 
+***Update (5/1/2018): Github Pages now supports HTTPS for custom domain:
+<https://github.blog/2018-05-01-github-pages-custom-domains-https/> so netlify is not necessary for HTTPS***
+
 | | WordPress.com | GitHub Pages | Netlify |
 |-|:-------------:|:-------------:|:-----:|
 | Easy to Use? | Yes | Use Git+Markdown | Use Git+Markdown |
